@@ -13,7 +13,6 @@ const useStyles = makeStyles({
   table :{
     minWidth : 650,
     maxWidth : 1000,
-    alignSelf : 'center',
   }
 }); 
 
