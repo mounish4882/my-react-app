@@ -1,7 +1,7 @@
 import React from 'react';
 
-const PersonList = ({person,handleRemovePerson}) => {
-    return person.map(person => {
+const PersonList = ({persons,handleRemovePerson}) => {
+    return persons.map(person => {
       return (
       <div key={person.id} class='Person'>
         <ul>

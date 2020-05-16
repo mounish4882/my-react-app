@@ -3,6 +3,7 @@ import PersonList from './components/PersonList';
 import './App.css';
 import { person_data } from './utils/constants';
 import Search from './components/Search';
+import PersonTable from './components/PersonTable';
 
 
 const personReducer = (state,action) => {
@@ -76,9 +77,9 @@ const App = () => {
       {isLoading ? (
         <p>Loading Courses ......</p>
       ):(
-        <PersonList person={filteredPersons} handleRemovePerson={handleRemovePerson}/>
+        <PersonList persons={filteredPersons} handleRemovePerson={handleRemovePerson}/>
       )}
-      {/* <PersonTable person = {filteredPersons}/> */}
+      <PersonTable persons={filteredPersons}/>
     </div>
   );
 }
