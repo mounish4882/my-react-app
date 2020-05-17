@@ -12,7 +12,6 @@ import PersonRows from './PersonRows';
 const useStyles = makeStyles({
   table :{
     minWidth : 650,
-    maxWidth : 650,
   }
 }); 
 

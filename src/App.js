@@ -45,7 +45,7 @@ const App = () => {
     new Promise(resolve => 
       setTimeout(
         () => resolve({person: person_data}),
-        200
+        2000
         ) 
       );
 
@@ -75,11 +75,15 @@ const App = () => {
       <Search value={searchText} onSearch={handleSearch}/>
       <h4 class='head'>Searching for : <u>{searchText}</u></h4>
       {isLoading ? (
-        <p>Loading Courses ......</p>
+        <p>Loading Courses ...</p>
       ):(
         <PersonList persons={filteredPersons} handleRemovePerson={handleRemovePerson}/>
       )}
-      <PersonTable persons={filteredPersons}/>
+      {isLoading ? (
+        <p>Loading Table ...</p>
+      ):(
+        <PersonTable persons={filteredPersons}/>
+      )}
     </div>
   );
 }
